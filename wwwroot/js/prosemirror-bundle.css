@@ -1,0 +1,44 @@
+/* ProseMirror base styles (from prosemirror-view@1.32.7/style/prosemirror.css) */
+.ProseMirror {
+  position: relative;
+}
+.ProseMirror {
+  word-wrap: break-word;
+  white-space: pre-wrap;
+  -webkit-font-variant-ligatures: none;
+  font-variant-ligatures: none;
+}
+.ProseMirror pre {
+  white-space: pre-wrap;
+}
+.ProseMirror li {
+  position: relative;
+}
+.ProseMirror-hideselection *::selection { background: transparent; }
+.ProseMirror-hideselection *::-moz-selection { background: transparent; }
+.ProseMirror-hideselection { caret-color: transparent; }
+.ProseMirror-selectednode {
+  outline: 2px solid #8cf;
+}
+.ProseMirror .ProseMirror-gapcursor {
+  display: none;
+}
+.ProseMirror-focused .ProseMirror-gapcursor {
+  display: block;
+  position: absolute;
+  pointer-events: none;
+}
+.ProseMirror-gapcursor:after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: -2px;
+  top: -2px;
+  width: 2px;
+  height: 1em;
+  background-color: black;
+  z-index: 20;
+}
+.ProseMirror .ProseMirror-widget {
+  display: inline-block;
+}

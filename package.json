@@ -1,0 +1,26 @@
+{
+  "name": "prossmirror-demo",
+  "version": "1.0.0",
+  "description": "ASP.NET ProseMirror integration",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --mode production"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "prosemirror-example-setup": "^1.2.3",
+    "prosemirror-model": "^1.25.1",
+    "prosemirror-schema-basic": "^1.2.4",
+    "prosemirror-state": "^1.4.3",
+    "prosemirror-tables": "^1.7.1",
+    "prosemirror-view": "^1.40.0",
+    "webpack": "^5.99.9",
+    "webpack-cli": "^6.0.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.27.4",
+    "@babel/preset-env": "^7.27.2",
+    "babel-loader": "^10.0.0"
+  }
+}

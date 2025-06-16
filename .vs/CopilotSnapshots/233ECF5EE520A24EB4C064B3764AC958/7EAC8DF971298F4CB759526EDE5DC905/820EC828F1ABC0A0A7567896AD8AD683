@@ -1,0 +1,38 @@
+﻿// Please see documentation at https://learn.microsoft.com/aspnet/core/client-side/bundling-and-minification
+// for details on configuring this project to bundle and minify static web assets.
+
+$(document).ready(function() {
+    console.log("DOM fully loaded and parsed");
+});
+
+window.initProseMirror = function(containerId) {
+    var container = document.getElementById(containerId);
+    if (!container) return;
+
+    // Create the editor state using our setup
+    var state = window.ProseMirrorSetup.createEditorState();
+
+    // Create the editor view
+    var view = new prosemirror_view.EditorView(container, {
+        state: state,
+        dispatchTransaction(transaction) {
+            let newState = view.state.apply(transaction);
+            view.updateState(newState);
+        }
+    });
+
+    // Add basic keyboard handlers
+    container.addEventListener('keydown', (e) => {
+        if (e.key === 'Tab') {
+            e.preventDefault();
+            // Handle tab key if needed
+        }
+    });
+};
+
+document.addEventListener('DOMContentLoaded', function() {
+    if (document.getElementById('editor')) {
+        window.initProseMirror('editor');
+    }
+});
+

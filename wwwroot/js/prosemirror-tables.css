@@ -1,0 +1,29 @@
+/* ProseMirror tables styles (from prosemirror-tables@1.2.2/style/tables.css) */
+.ProseMirror table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+.ProseMirror td, .ProseMirror th {
+  vertical-align: top;
+  border: 1px solid #ddd;
+  padding: 3px 5px;
+  min-width: 1em;
+  box-sizing: border-box;
+  position: relative;
+}
+.ProseMirror th {
+  font-weight: bold;
+  text-align: left;
+  background: #f7f7f7;
+}
+.ProseMirror .column-resize-handle {
+  position: absolute;
+  right: -2px; top: 0; bottom: 0;
+  width: 4px;
+  z-index: 20;
+  background-color: #adf;
+  pointer-events: none;
+}
+.ProseMirror.resize-cursor {
+  cursor: ew-resize;
+}
